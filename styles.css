@@ -1208,7 +1208,7 @@ margin-top: -.5rem;
     }
     .website-name
     {
-        margin-left: .8rem;
+        padding-left:1rem;
     }
    .text-fields input
    {
