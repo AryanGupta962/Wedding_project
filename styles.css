@@ -152,7 +152,7 @@ transform: scaleX(2);
 .nav-links li a:hover{
     color: rgb(170, 213, 52);
 }
-.nav-items div button
+.search-btn button 
 {
    
     background-color: rgb(190, 224, 67);
@@ -166,13 +166,17 @@ transform: scaleX(2);
 
 }
 
-.nav-items div button img{
+.search-btn img{
     width: 25px;
     height: 25px;
 }
-.nav-items div :hover{
+.search-btn :hover{
     cursor: pointer;
     background-color: var(--red);
+}
+.humburger:hover
+{
+    background-color: none;
 }
 .hero-section
 {
@@ -790,6 +794,10 @@ transform: scaleX(2);
     float: right;
     margin-top: 1rem;
     transition:box-shadow .10s linear ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 .message-btn:hover{
    
@@ -998,9 +1006,8 @@ margin-top: -.5rem;
     }
     .humburger
     {
-        display: flex;
-      
-
+        display: block;
+        background: none;
     }
     .client-desc
     {
