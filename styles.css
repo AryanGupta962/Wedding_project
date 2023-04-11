@@ -21,17 +21,16 @@
 .nav-svg-div
 {
     position: relative;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    
+    top: -1px;
+    height: auto;
+    width: auto;
 }
 
 .navsvg
 {
-transform: scaleX(2);
-   width: 100%;
-   height: 85%;
+
+   width: auto;
+   height: auto;
  position: absolute;
  top: 1px;
  size: 100% 100%;
@@ -131,8 +130,8 @@ transform: scaleX(2);
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
 
 }
 .nav-links
@@ -184,16 +183,18 @@ transform: scaleX(2);
     display: flex;
     margin-top:5rem;
     background-color: rgb(245, 241, 241);
-    gap: 1rem;
+    
     justify-content: center;
     align-items: center;
 }
 .couple
 {
+    
     width: 50%;
 }
 .hero-text 
 {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -391,7 +392,7 @@ transform: scaleX(2);
 .service-items
 {
     padding-top: 3rem;
-    width: 65%;
+    width: 100%;
    display: flex;
    gap: 1rem;
    flex-wrap:wrap ;
@@ -646,40 +647,43 @@ transform: scaleX(2);
     flex-direction: column;
     gap: 2rem;
     padding-bottom: 5rem;
-    
+    justify-content: center;
+    align-items: center;
 }
 .card
 {
     display: flex;
     border-radius:1rem;
-    width: 60%;
-    
+    width:60%;
+    height:12rem;
+
 }
 .client-img
 {
     width: 50%;
-     
-
+    height:100%;
 }
 .client-img img{
-    border-radius:1rem ;
-    width: 100%;
- 
+    border-radius:1rem 0 0 1rem ;
+  object-fit:cover;
+height: 100%;
+width: 100%;
 }
 .client-desc
 {
+
    background-color: white;
+   height: 100%;
     width: 50%;
-    font-size: .8rem;
+    font-size: 70%;
     padding: 1rem;
     color: rgb(127, 126, 126);
-    border-radius:1rem ;
+   border-top-right-radius: 1rem;
+   border-bottom-right-radius: 1rem;
     box-shadow: 0px 0px 6px rgb(242, 83, 83);
-    margin-left: -1.5rem;
     transition: all .10s linear;
-    display: flex;
-    flex-direction: column;
-    gap: .8rem;
+    flex: 1;
+    overflow-y: scroll;
 }
 .client-desc:hover
 {
@@ -700,19 +704,7 @@ transform: scaleX(2);
 {
     box-shadow: 0px 0px 6px rgb(242, 83, 83);
 }
-.card1
-{
-    padding-left: 4rem;
-}
-.card2
-{
-  align-self: flex-end;
-  padding-right: 4rem;
-}
-.card3
-{
-    padding-left: 4rem;
-}
+
 .connect-section
 {
     padding-bottom: 5rem;
@@ -834,13 +826,13 @@ transform: scaleX(2);
 }
 .footer-content-container
 {
-    width: 62%;
+    width: 50%;
     margin: auto;
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    align-items: first baseline;
+    
 }
 .foot1,.foot2,.foot3,.foot4
 {
@@ -927,7 +919,7 @@ margin-top: -.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
     font-size: .8rem;
  }
  .foot3-links a{
@@ -1009,24 +1001,13 @@ margin-top: -.5rem;
         display: block;
         background: none;
     }
-    .client-desc
-    {
-        width: 80%;
-    }
-    
-    .card{
-        align-self: center;
-        
-    }
+  
  }
  @media (max-width:840px) {
     .time-webname{
         left: 6rem;
     }
-    .card
-    {
-        width: 70%;
-    }
+ 
     .slider
     {
         width: 90%;
@@ -1043,6 +1024,29 @@ margin-top: -.5rem;
     }
  }
  @media (max-width:550px) {
+    .card
+    {
+        flex-direction: column;
+        height: 25rem;
+        width: 80%;
+    }
+    .client-img
+    {
+        width: 100%;
+      height: 50%;
+
+    }
+    .client-img img {
+        width: 100%;
+        object-fit: cover;
+        border-top-right-radius: 1rem; 
+        border-bottom-left-radius: 0px;
+    };
+   
+    .nav-items
+    {
+        padding-top: 1.5rem;
+    }
     .time-webname{
         left: .5rem;
         top: 1rem;
@@ -1089,6 +1093,7 @@ margin-top: -.5rem;
     .hero-section
     {
         flex-direction: column;
+        gap: 1.5rem;
     }
     .couple
     {
@@ -1100,13 +1105,8 @@ margin-top: -.5rem;
        text-align: center;
        padding-bottom: .7rem;
     }
-    .navsvg
-    {
-        top: -1.5rem;
-    }
-    .card
-    {
-        width: 80%;
+    .card{
+        width: 85%;
     }
  }
  @media (max-width:1070px) {
@@ -1122,10 +1122,6 @@ margin-top: -.5rem;
         flex-direction: column;
         width: 80%;
     }
-    .client-desc p
-    {
-        font-size: .6rem;
-    }
     .about-image 
     {
         height: 15%;
@@ -1138,14 +1134,6 @@ margin-top: -.5rem;
  }
  @media (max-width:594px) {
    
-    .card
-    {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-
-    }
     .form-div{
         width: 100%;
         padding: 0;
@@ -1157,32 +1145,12 @@ margin-top: -.5rem;
     }
     .form-div button{
         width: 100%;
-      
-    }
-    .client-desc
-    {
-        margin: 0;
-        margin-top: -1rem;
-    }
-    .client-section
-    {
-        width: 90%;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-    }
-    .client-img
-    {
-        width: 60%;
     }
     .time-webname
     {
         margin-left: .5rem;
     }
-    .website-name
-    {
-      
-    }
+
     .website-name p
     {
         font-size:2.5rem ;
@@ -1193,6 +1161,10 @@ margin-top: -.5rem;
     
  }
 @media (max-width:498px) {
+    .nav-items
+    {
+        padding-top: 3.5rem;
+    }
     .form1-gallery
     {
         gap: .4rem;
@@ -1225,5 +1197,25 @@ margin-top: -.5rem;
     .time-webname
     {
         margin-left: -.2rem;
+    }
+    .footer-content-container
+    {
+        width: 80%;
+    }
+}
+@media (min-width:840px) {
+    .navsvg
+    {
+      height: 5rem;
+    }
+}
+@media (max-width:550px) {
+    .client-desc
+    {
+        width:100%;
+        height: 50%;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 1rem;
+        
     }
 }
